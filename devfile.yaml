@@ -1,6 +1,6 @@
 apiVersion: 1.0.0
 metadata:
-  generateName: java15-record-
+  generateName: java14-helpful-npe-
 
 projects:
   - name: helpful-npe-error-java-14
@@ -51,5 +51,5 @@ commands:
     actions:
       - workdir: '${CHE_PROJECTS_ROOT}/helpful-npe-error-java-14'
         type: exec
-        command: set -o xtrace; javac *.java && java Main
+        command: set -o xtrace; javac *.java && java -XX:+ShowCodeDetailsInExceptionMessages Main
         component: openjdk--14-jdk
